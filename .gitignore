@@ -3,3 +3,5 @@ __pycache__
 *.swp
 venv/
 sitefish/static/vendor
+sitefish/static/.webassets-cache
+sitefish/static/generic

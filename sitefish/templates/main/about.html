@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>About</title>
-  </head>
-  <body>
-    <div>Сайт в стадии разработки...</div>
-    <div>О компании.</div>
-    <div><a href="/index.html">На главную</a></div>
-    <div><a href="/contacts.html">Контакты</a></div>
-  </body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}О компании{% endblock title %}
+
+{% block styles %}
+  {{ super() }}
+  {% assets filters='cssmin', output='generic/css/main/about.css',
+            'css/base.css' %}
+    <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">
+  {% endassets %}
+{% endblock styles %}

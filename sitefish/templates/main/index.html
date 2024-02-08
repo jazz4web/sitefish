@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Index Page</title>
-  </head>
-  <body>
-    <div>Сайт в стадии разработки...</div>
-    <div>Стартовая страница.</div>
-    <div><a href="/about.html">О компании</a></div>
-    <div><a href="/contacts.html">Контакты</a></div>
-  </body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Index{% endblock title %}
+
+{% block styles %}
+  {{ super() }}
+  {% assets filters='cssmin', output='generic/css/main/index.css',
+            'css/base.css' %}
+    <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">
+  {% endassets %}
+  <link rel="canonical" href="{{ url_for('index') }}">
+{% endblock styles %}
