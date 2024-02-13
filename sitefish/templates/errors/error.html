@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}{{ error }}{% endblock title %}
+
+{% block styles %}
+  {{ super() }}
+  {% assets filters='cssmin', output='generic/css/errors/error.css',
+            'css/base.css' %}
+    <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">
+  {% endassets %}
+{% endblock styles %}
