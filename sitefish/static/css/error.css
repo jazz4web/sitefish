@@ -1,0 +1,14 @@
+#error {
+  color: #a94442;
+}
+
+#error h1 {
+  margin: 0;
+}
+
+#error p {
+  font-weight: 600;
+  font-style: italic;
+  margin: 0;
+}
+

@@ -59,10 +59,25 @@
                 </li>
               </ul>
             </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Продукты <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="{{ url_for('page', page='books.html') }}">
+                    Книги
+                  </a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
+    <div id="main-container">
+      {% block page_body %}{% endblock page_body %}
+    </div>
     <footer id="footer">
       <div class="container-fluid">
         <div class="footer-block"></div>

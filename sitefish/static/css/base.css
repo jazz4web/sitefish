@@ -20,6 +20,14 @@ body {
   padding-top: 10px;
 }
 
+.message-text {
+  font-style: italic;
+}
+
+.alert {
+  margin: 0;
+}
+
 #footer {
   position: absolute;
   bottom: 0;

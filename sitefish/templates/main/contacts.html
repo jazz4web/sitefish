@@ -5,7 +5,25 @@
 {% block styles %}
   {{ super() }}
   {% assets filters='cssmin', output='generic/css/main/contacts.css',
+            'css/mc780.css',
+            'css/title.css',
             'css/base.css' %}
     <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">
   {% endassets %}
 {% endblock styles %}
+
+{% block page_body %}
+  <div id="title">
+    <h1>Наши контакты</h1>
+  </div>
+{% endblock page_body %}
+
+{% block scripts %}
+  {{ super() }}
+  {% assets filters='rjsmin', output='generic/js/main/contacts.js',
+            'js/format-footer.js',
+            'js/check-mc.js',
+            'js/main/contacts.js' %}
+    <script src="{{ ASSET_URL }}"></script>
+  {% endassets %}
+{% endblock scripts %}
